@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MyFirstApp.Views.SignInPage"
+             Title="Sign In">
+    <Grid RowDefinitions="*,45,45,*,*">
+        <Label Text="Email" 
+               VerticalOptions="End" 
+               FontSize="13" 
+               LineHeight="18" 
+               TextColor="{StaticResource blue2}" 
+               FontFamily="Roboto-Bold"/>
+        <Entry Keyboard="Email" 
+               Grid.Row="1" 
+               x:Name="email" 
+               Text="{Binding Email}"
+               TextColor="{StaticResource mainBlue}"
+               FontSize="17"
+               FontFamily="Roboto-Regular"/>
+        <Label Text="Password" 
+               Grid.Row="2" 
+               FontSize="13"
+               LineHeight="18" 
+               TextColor="{StaticResource blue2}" 
+               FontFamily="Roboto-Bold"
+               VerticalOptions="End"/>
+        <Entry Grid.Row="3" 
+               x:Name="password" 
+               Text="{Binding Password}"
+               TextColor="{StaticResource mainBlue}"
+               FontSize="17"
+               FontFamily="Roboto-Regular"
+               VerticalOptions="Start"/>
+        <Button 
+            Style="{StaticResource buttonStyle}"
+            Text="Log In" 
+            Grid.Row="4" 
+            VerticalOptions="End"
+            Command="{Binding SignIn}"
+            IsEnabled="{Binding IsEnableSignIn}">
+        </Button>
+    </Grid>
+  
+</ContentPage>
