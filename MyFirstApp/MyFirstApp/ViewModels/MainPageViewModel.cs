@@ -1,8 +1,6 @@
-﻿using System.Windows.Input;
-using AsyncAwaitBestPractices.MVVM;
+﻿using AsyncAwaitBestPractices.MVVM;
 using MyFirstApp.Views;
 using Prism.Navigation;
-using Xamarin.Forms;
 
 namespace MyFirstApp.ViewModels
 {
