@@ -109,6 +109,7 @@ Global
 		{5D617E15-1D08-497F-BECF-94B68C491B85}.Release|iPhone.Build.0 = Release|iPhone
 		{5D617E15-1D08-497F-BECF-94B68C491B85}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{5D617E15-1D08-497F-BECF-94B68C491B85}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{5D617E15-1D08-497F-BECF-94B68C491B85}.Debug|iPhoneSimulator.Deploy.0 = Debug|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,37 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com"
-             x:Class="MyFirstApp.App">
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:prism="http://prismlibrary.com"
+                        x:Class="MyFirstApp.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="mainBlue">#172940</Color>
-            <Color x:Key="blue">#364959</Color>
-            <Color x:Key="blue2">#6D7E8C</Color>
-            <Color x:Key="gray">#808080</Color>
-            <Color x:Key="white">#FFFFFF</Color>
-            <Color x:Key="buttonBackgroundColor">#1A3D59</Color>
+            <Color x:Key="MainBlue">#172940</Color>
+            <Color x:Key="Blue">#364959</Color>
+            <Color x:Key="Blue2">#6D7E8C</Color>
+            <Color x:Key="Gray">#808080</Color>
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="ButtonBackgroundColor">#1A3D59</Color>
 
-            <Style x:Key="buttonStyle" TargetType="Button">
-                <Setter Property="TextColor" Value="{StaticResource white}" />
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource White}" />
                 <Setter Property="TextTransform" Value="None" />
-                <Setter Property="BackgroundColor" Value="{StaticResource buttonBackgroundColor}"/>
-                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColor}" />
+                <Setter Property="CornerRadius" Value="10" />
                 <Style.Triggers>
                     <Trigger TargetType="Button" Property="IsEnabled" Value="False">
-                        <Setter Property="TextColor" Value="{StaticResource white}" />
+                        <Setter Property="TextColor" Value="{StaticResource White}" />
                         <Setter Property="BackgroundColor" Value="#DFE2E5" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
-            
+
             <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
                 <Setter Property="Padding" Value="16" />
             </Style>
 
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="Transparent"/>
-                <Setter Property="BarTextColor" Value="{StaticResource blue}"/>
+                <Setter Property="BarBackgroundColor" Value="Transparent" />
+                <Setter Property="BarTextColor" Value="{StaticResource Blue}" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

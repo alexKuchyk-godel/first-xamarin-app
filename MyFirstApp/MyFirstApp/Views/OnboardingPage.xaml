@@ -1,23 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="MyFirstApp.Views.OnboardingPage">
     <NavigationPage.TitleView>
-        <Label Text="Skip"  
+        <Label Text="Skip"
                HorizontalOptions="End"
                FontSize="16"
                FontFamily="Roboto-Light"
                Margin="0,0,15,0">
             <Label.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding Skip}"/>
+                <TapGestureRecognizer Command="{Binding Skip}" />
             </Label.GestureRecognizers>
         </Label>
     </NavigationPage.TitleView>
     <Grid RowDefinitions="*, 100, 50">
-        <CarouselView IndicatorView="indicator" 
-                      ItemsSource="{Binding Data}" 
+        <CarouselView 
+            IndicatorView="indicator"
+                      ItemsSource="{Binding Data}"
                       Position="{Binding Position}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
@@ -27,31 +29,29 @@
                                HeightRequest="300"
                                HorizontalOptions="Center"
                                VerticalOptions="End" />
-                        <Label Text="{Binding Info}" 
+                        <Label Text="{Binding Info}"
                                WidthRequest="255"
-                               TextColor="{StaticResource blue}"
+                               TextColor="{StaticResource Blue}"
                                FontFamily="Roboto-Regular"
                                FontSize="28"
-                               HorizontalOptions="Center" 
+                               HorizontalOptions="Center"
                                VerticalOptions="End"
                                HorizontalTextAlignment="Center"
-                               Grid.Row="1"/>
+                               Grid.Row="1" />
                     </Grid>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
         <IndicatorView
-                x:Name="indicator"
-                Grid.Row="1"
-                HorizontalOptions="Center"
-                IndicatorColor="{StaticResource gray}"
-                SelectedIndicatorColor="{StaticResource blue}"
-                VerticalOptions="Center">
-        </IndicatorView>
-        <Button Style="{StaticResource buttonStyle}"
-                Text="Continue"  
-                Grid.Row="2" 
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            IndicatorColor="{StaticResource Gray}"
+            SelectedIndicatorColor="{StaticResource Blue}"
+            VerticalOptions="Center" />
+        <Button Style="{StaticResource ButtonStyle}"
+                Text="Continue"
+                Grid.Row="2"
                 VerticalOptions="Center"
-                Command="{Binding Continue}"/>
+                Command="{Binding Continue}" />
     </Grid>
 </ContentPage>

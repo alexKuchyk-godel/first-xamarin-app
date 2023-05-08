@@ -1,26 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MyFirstApp.MarkupExtensions"
              x:Class="MyFirstApp.Views.MainPage">
     <Grid RowDefinitions="*, *, 50">
-        <Image WidthRequest="90" 
-               HeightRequest="90" 
+        <Image WidthRequest="90"
+               HeightRequest="90"
                VerticalOptions="End"
-               Source="{local:EmbededImageExtensions MyFirstApp.Images.logo.png}"/>
-        <Label Text="Godel Assistance" 
-               TextColor="{StaticResource blue}" 
+               Source="{local:EmbeddedImageExtensions MyFirstApp.Images.logo.png}" />
+        <Label Text="Godel Assistance"
+               TextColor="{StaticResource Blue}"
                FontSize="26"
                LineHeight="22"
                FontFamily="Roboto-Bold"
-               HorizontalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"
                TextTransform="Uppercase"
                Grid.Row="1"
-               Margin="0,20,0,0"/>
-        <Button Style="{StaticResource buttonStyle}"
-                Text="Get Started"  
-                Grid.Row="2" 
+               Margin="0,20,0,0" />
+        <Button Style="{StaticResource ButtonStyle}"
+                Text="Get Started"
+                Grid.Row="2"
                 VerticalOptions="Center"
-                Command="{Binding GetStarted}"/>
+                Command="{Binding GetStarted}" />
     </Grid>
 </ContentPage>

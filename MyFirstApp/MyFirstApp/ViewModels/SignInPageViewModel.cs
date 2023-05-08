@@ -1,13 +1,18 @@
-﻿using Prism.Navigation;
-using Prism.Services;
-using System;
+﻿using System;
 using System.Windows.Input;
+using Prism.Navigation;
+using Prism.Services;
 using Xamarin.Forms;
 
 namespace MyFirstApp.ViewModels
 {
     public class SignInPageViewModel : ViewModelBase
     {
+        private readonly IPageDialogService _dialogService;
+
+        private string _email;
+        private string _password;
+
         public string Email
         {
             get => _email;
@@ -17,6 +22,7 @@ namespace MyFirstApp.ViewModels
                 RaisePropertyChanged(nameof(IsEnableSignIn));
             }
         }
+
         public string Password
         {
             get => _password;
@@ -26,20 +32,13 @@ namespace MyFirstApp.ViewModels
                 RaisePropertyChanged(nameof(IsEnableSignIn));
             }
         }
-        public bool IsEnableSignIn
-        {
-            get
-            {
-                return !string.IsNullOrEmpty(Email)
-                    && !string.IsNullOrEmpty(Password);
 
-            }
-        }
-        public ICommand SignIn => new Command(async () => await _dialogService.DisplayAlertAsync("Hello", Email, "Ok"));
+        public bool IsEnableSignIn =>
+            !string.IsNullOrEmpty(Email)
+            && !string.IsNullOrEmpty(Password);
 
-        private string _email;
-        private string _password;
-        private readonly IPageDialogService _dialogService;
+        public ICommand SignIn => new Command(async () =>
+            await _dialogService.DisplayAlertAsync("Hello", Email, "Ok"));
 
         public SignInPageViewModel(
             INavigationService navigationService,
