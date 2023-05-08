@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using AsyncAwaitBestPractices.MVVM;
 using MyFirstApp.Models;
 using MyFirstApp.Views;
 using Prism.AppModel;
@@ -42,8 +43,8 @@ namespace MyFirstApp.ViewModels
             }
         };
 
-        public ICommand Continue => new Command(async () => await OnContinueAsync());
-        public ICommand Skip => new Command(async () => await OnSkipAsync());
+        public IAsyncCommand Continue => new AsyncCommand(async () => await OnContinueAsync());
+        public IAsyncCommand Skip => new AsyncCommand(async () => await OnSkipAsync());
 
         public OnboardingPageViewModel(INavigationService navigationService)
             : base(navigationService)

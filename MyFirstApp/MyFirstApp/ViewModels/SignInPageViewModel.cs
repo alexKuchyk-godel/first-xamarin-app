@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Windows.Input;
+using AsyncAwaitBestPractices.MVVM;
 using Prism.Navigation;
 using Prism.Services;
-using Xamarin.Forms;
 
 namespace MyFirstApp.ViewModels
 {
@@ -37,7 +36,7 @@ namespace MyFirstApp.ViewModels
             !string.IsNullOrEmpty(Email)
             && !string.IsNullOrEmpty(Password);
 
-        public ICommand SignIn => new Command(async () =>
+        public IAsyncCommand SignIn => new AsyncCommand(async () =>
             await _dialogService.DisplayAlertAsync("Hello", Email, "Ok"));
 
         public SignInPageViewModel(

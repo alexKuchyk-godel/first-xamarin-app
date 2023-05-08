@@ -17,10 +17,10 @@
         </Label>
     </NavigationPage.TitleView>
     <Grid RowDefinitions="*, 100, 50">
-        <CarouselView 
+        <CarouselView
             IndicatorView="indicator"
-                      ItemsSource="{Binding Data}"
-                      Position="{Binding Position}">
+            ItemsSource="{Binding Data}"
+            Position="{Binding Position}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <Grid RowDefinitions="3*,*">
