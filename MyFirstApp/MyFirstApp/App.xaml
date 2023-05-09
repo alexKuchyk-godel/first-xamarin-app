@@ -27,7 +27,7 @@
             </Style>
 
             <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
-                <Setter Property="Padding" Value="16" />
+                <Setter Property="Padding" Value="{OnPlatform iOS=30, Default=16}" />
             </Style>
 
             <Style TargetType="NavigationPage">

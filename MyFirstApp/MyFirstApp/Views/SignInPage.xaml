@@ -10,7 +10,6 @@
         <Label Text="Email"
                VerticalOptions="End"
                FontSize="13"
-               LineHeight="18"
                TextColor="{StaticResource Blue2}"
                FontFamily="Roboto-Bold" />
         <Entry Keyboard="Email"
@@ -18,19 +17,21 @@
                Text="{Binding Email}"
                TextColor="{StaticResource MainBlue}"
                FontSize="17"
+               HeightRequest="{OnPlatform iOS=45}"
                FontFamily="Roboto-Regular" />
         <Label Text="Password"
                Grid.Row="2"
                FontSize="13"
-               LineHeight="18"
                TextColor="{StaticResource Blue2}"
                FontFamily="Roboto-Bold"
                VerticalOptions="End" />
         <Entry Grid.Row="3"
+               IsPassword="True"
                Text="{Binding Password}"
                TextColor="{StaticResource MainBlue}"
                FontSize="17"
                FontFamily="Roboto-Regular"
+               HeightRequest="{OnPlatform iOS=45}"
                VerticalOptions="Start" />
         <Button
             Style="{StaticResource ButtonStyle}"

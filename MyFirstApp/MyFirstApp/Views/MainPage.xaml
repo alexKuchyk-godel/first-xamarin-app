@@ -12,7 +12,6 @@
         <Label Text="Godel Assistance"
                TextColor="{StaticResource Blue}"
                FontSize="26"
-               LineHeight="22"
                FontFamily="Roboto-Bold"
                HorizontalTextAlignment="Center"
                TextTransform="Uppercase"

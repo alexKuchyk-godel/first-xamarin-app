@@ -10,7 +10,8 @@
                HorizontalOptions="End"
                FontSize="16"
                FontFamily="Roboto-Light"
-               Margin="0,0,15,0">
+               TextColor="{StaticResource MainBlue}"
+               Margin="{OnPlatform iOS='0,15,15,0', Default='0,0,15,0'}">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding Skip}" />
             </Label.GestureRecognizers>
@@ -18,7 +19,7 @@
     </NavigationPage.TitleView>
     <Grid RowDefinitions="*, 100, 50">
         <CarouselView
-            IndicatorView="indicator"
+            IndicatorView="IndicatorView"
             ItemsSource="{Binding Data}"
             Position="{Binding Position}">
             <CarouselView.ItemTemplate>
@@ -43,6 +44,7 @@
             </CarouselView.ItemTemplate>
         </CarouselView>
         <IndicatorView
+            x:Name="IndicatorView"
             Grid.Row="1"
             HorizontalOptions="Center"
             IndicatorColor="{StaticResource Gray}"
