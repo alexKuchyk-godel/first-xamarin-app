@@ -1,8 +1,6 @@
-﻿using Xamarin.Forms;
-
-namespace MyFirstApp.Views
+﻿namespace MyFirstApp.Views
 {
-    public partial class SignInPage : ContentPage
+    public partial class SignInPage
     {
         public SignInPage()
         {

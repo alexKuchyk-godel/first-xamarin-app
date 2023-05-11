@@ -30,6 +30,7 @@ namespace MyFirstApp
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<OnboardingPage, OnboardingPageViewModel>();
             containerRegistry.RegisterForNavigation<SignInPage, SignInPageViewModel>();
+            containerRegistry.RegisterForNavigation<MainMenuPage, MainMenuPageViewModel>();
         }
     }
 }

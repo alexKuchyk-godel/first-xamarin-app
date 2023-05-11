@@ -1,11 +1,6 @@
-﻿using MyFirstApp.ViewModels;
-using Prism.Navigation;
-using System.ComponentModel;
-using Xamarin.Forms;
-
-namespace MyFirstApp.Views
+﻿namespace MyFirstApp.Views
 {
-    public partial class OnboardingPage : ContentPage
+    public partial class OnboardingPage
     {
         public OnboardingPage()
         {

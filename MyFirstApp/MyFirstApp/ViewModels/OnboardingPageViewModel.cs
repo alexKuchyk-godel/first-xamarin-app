@@ -1,12 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Windows.Input;
 using AsyncAwaitBestPractices.MVVM;
 using MyFirstApp.Models;
 using MyFirstApp.Views;
 using Prism.AppModel;
 using Prism.Navigation;
-using Xamarin.Forms;
 
 namespace MyFirstApp.ViewModels
 {
@@ -17,11 +15,7 @@ namespace MyFirstApp.ViewModels
         public int Position
         {
             get => _position;
-            set
-            {
-                _position = value;
-                RaisePropertyChanged();
-            }
+            set => SetProperty(ref _position, value);
         }
 
         public List<OnboardingModel> Data { get; } = new List<OnboardingModel>

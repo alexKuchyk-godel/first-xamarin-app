@@ -1,5 +1,6 @@
 ﻿using System;
 using AsyncAwaitBestPractices.MVVM;
+using MyFirstApp.Views;
 using Prism.Navigation;
 using Prism.Services;
 
@@ -15,21 +16,13 @@ namespace MyFirstApp.ViewModels
         public string Email
         {
             get => _email;
-            set
-            {
-                _email = value;
-                RaisePropertyChanged(nameof(IsEnableSignIn));
-            }
+            set => SetProperty(ref _email, value, nameof(IsEnableSignIn));
         }
 
         public string Password
         {
             get => _password;
-            set
-            {
-                _password = value;
-                RaisePropertyChanged(nameof(IsEnableSignIn));
-            }
+            set => SetProperty(ref _password, value, nameof(IsEnableSignIn));
         }
 
         public bool IsEnableSignIn =>
@@ -37,7 +30,7 @@ namespace MyFirstApp.ViewModels
             && !string.IsNullOrEmpty(Password);
 
         public IAsyncCommand SignIn => new AsyncCommand(async () =>
-            await _dialogService.DisplayAlertAsync("Hello", Email, "Ok"));
+            await NavigationService.NavigateAsync(nameof(MainMenuPage)));
 
         public SignInPageViewModel(
             INavigationService navigationService,
