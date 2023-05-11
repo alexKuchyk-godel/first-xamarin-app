@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MyFirstApp.Views.OnboardingPage">
+    <NavigationPage.TitleView>
+        <Label Text="Skip"
+               HorizontalOptions="End"
+               FontSize="16"
+               FontFamily="Roboto-Light"
+               TextColor="{StaticResource MainBlue}"
+               Margin="{OnPlatform iOS='0,15,15,0', Default='0,0,15,0'}">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Skip}" />
+            </Label.GestureRecognizers>
+        </Label>
+    </NavigationPage.TitleView>
+    <Grid RowDefinitions="*, 100, 50">
+        <CarouselView
+            IndicatorView="IndicatorView"
+            ItemsSource="{Binding Data}"
+            Position="{Binding Position}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="3*,*">
+                        <Image Source="{Binding ImagePath}"
+                               WidthRequest="340"
+                               HeightRequest="300"
+                               HorizontalOptions="Center"
+                               VerticalOptions="End" />
+                        <Label Text="{Binding Info}"
+                               WidthRequest="255"
+                               TextColor="{StaticResource Blue}"
+                               FontFamily="Roboto-Regular"
+                               FontSize="28"
+                               HorizontalOptions="Center"
+                               VerticalOptions="End"
+                               HorizontalTextAlignment="Center"
+                               Grid.Row="1" />
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView
+            x:Name="IndicatorView"
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            IndicatorColor="{StaticResource Gray}"
+            SelectedIndicatorColor="{StaticResource Blue}"
+            VerticalOptions="Center" />
+        <Button Style="{StaticResource ButtonStyle}"
+                Text="Continue"
+                Grid.Row="2"
+                VerticalOptions="Center"
+                Command="{Binding Continue}" />
+    </Grid>
+</ContentPage>
