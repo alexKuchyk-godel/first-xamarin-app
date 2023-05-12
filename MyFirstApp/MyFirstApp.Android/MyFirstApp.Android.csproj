@@ -64,6 +64,9 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.7.0" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
+    <PackageReference Include="Xamarin.CommunityToolkit">
+      <Version>2.0.6</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainApplication.cs" />
@@ -77,6 +80,20 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\add.png" />
+    <AndroidResource Include="Resources\drawable\beauty.png" />
+    <AndroidResource Include="Resources\drawable\cars.png" />
+    <AndroidResource Include="Resources\drawable\catalog.png" />
+    <AndroidResource Include="Resources\drawable\health.png" />
+    <AndroidResource Include="Resources\drawable\legal.png" />
+    <AndroidResource Include="Resources\drawable\map.png" />
+    <AndroidResource Include="Resources\drawable\pets.png" />
+    <AndroidResource Include="Resources\drawable\place.png" />
+    <AndroidResource Include="Resources\drawable\search.png" />
+    <AndroidResource Include="Resources\drawable\services.png" />
+    <AndroidResource Include="Resources\drawable\sport.png" />
+    <AndroidResource Include="Resources\drawable\travel.png" />
+    <AndroidResource Include="Resources\drawable\vector.png" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
     <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />

@@ -184,9 +184,22 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\add.png" />
+    <BundleResource Include="Resources\beauty.png" />
+    <BundleResource Include="Resources\cars.png" />
+    <BundleResource Include="Resources\catalog.png" />
+    <BundleResource Include="Resources\health.png" />
     <BundleResource Include="Resources\LaunchIcon%401x.png" />
     <BundleResource Include="Resources\LaunchIcon%402x.png" />
     <BundleResource Include="Resources\LaunchIcon%403x.png" />
+    <BundleResource Include="Resources\map.png" />
+    <BundleResource Include="Resources\pets.png" />
+    <BundleResource Include="Resources\place.png" />
+    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\services.png" />
+    <BundleResource Include="Resources\sport.png" />
+    <BundleResource Include="Resources\travel.png" />
+    <BundleResource Include="Resources\vector.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
@@ -199,14 +212,18 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.7.0" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
+    <PackageReference Include="Xamarin.CommunityToolkit">
+      <Version>2.0.6</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyFirstApp\MyFirstApp.csproj">
-      <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
+      <Project>{22AA67DD-01D5-4DE2-A948-6E7B252AA0A6}</Project>
       <Name>MyFirstApp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\legal.png" />
     <BundleResource Include="Resources\onboarding1.png" />
   </ItemGroup>
   <ItemGroup>

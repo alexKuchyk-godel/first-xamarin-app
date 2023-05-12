@@ -1,13 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstApp.Views.MainMenuPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Hello, world!"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="http://prismlibrary.com"
+            xmlns:views="clr-namespace:MyFirstApp.Views;assembly=MyFirstApp"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="MyFirstApp.Views.MainMenuPage"
+            UnselectedTabColor="{StaticResource Blue2}"
+            SelectedTabColor="{StaticResource Blue4}"
+            BarBackgroundColor="Transparent">
+    <NavigationPage.TitleView>
+        <Image Source="map.png"
+               HeightRequest="20"
+               WidthRequest="15"
+               VerticalOptions="Center"
+               HorizontalOptions="End" />
+    </NavigationPage.TitleView>
+    <views:SearchPage Title="Search" IconImageSource="search.png" />
+    <views:CatalogPage Title="Catalog" IconImageSource="catalog.png" />
+    <views:SavedPage Title="Saved" IconImageSource="vector.png" />
+    <views:AddPage Title="Add" IconImageSource="add.png" />
+</TabbedPage>
