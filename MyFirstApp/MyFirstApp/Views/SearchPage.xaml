@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MyFirstApp.Views.SearchPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Frame">
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="Padding" Value="5" />
+                <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+                <Setter Property="xct:ShadowEffect.OffsetY" Value="2" />
+                <Setter Property="xct:ShadowEffect.Radius" Value="8" />
+                <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource Gray}" />
+            </Style>
+
+            <Style x:Key="CategoryLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="{StaticResource Blue}" />
+                <Setter Property="FontFamily" Value="Roboto-Medium" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="CategoryLabelContainer" TargetType="Grid">
+                <Setter Property="RowDefinitions" Value="*,30" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid RowDefinitions="50,50,80,400">
+            <Label Text="Find place, contact or link"
+                   FontSize="24"
+                   FontFamily="Roboto-Regular"
+                   TextColor="{StaticResource Blue}" />
+            <SearchBar Grid.Row="1"
+                       Placeholder="What are you looking for?"
+                       Margin="{OnPlatform iOS='-10,0,-10,0', Default='-20,0,0,0'}" />
+            <Grid Grid.Row="2"
+                  HeightRequest="40"
+                  VerticalOptions="End"
+                  ColumnDefinitions="*,90">
+                <Label Grid.Column="0"
+                       Text="Categories"
+                       FontSize="22"
+                       FontFamily="Roboto-Regular"
+                       TextColor="{StaticResource Blue}"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start" />
+                <Button Grid.Column="1"
+                        FontSize="13"
+                        FontFamily="Roboto-Bold"
+                        CornerRadius="10"
+                        TextColor="{StaticResource Blue2}"
+                        BackgroundColor="{StaticResource Gray2}"
+                        Text="View All" />
+            </Grid>
+            <Grid Grid.Row="3"
+                  Margin="0,20,0,0"
+                  RowSpacing="20"
+                  ColumnSpacing="20"
+                  RowDefinitions="*,*,*"
+                  ColumnDefinitions="*,*,*">
+                <Frame>
+                    <Grid Style="{StaticResource CategoryLabelContainer}">
+                        <Image Source="health.png" />
+                        <Label Grid.Row="1"
+                               Text="Health"
+                               Style="{StaticResource CategoryLabel}" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Column="1">
+                    <Grid Style="{StaticResource CategoryLabelContainer}">
+                        <Image Source="beauty.png" />
+                        <Label Grid.Row="1"
+                               Text="Beauty"
+                               Style="{StaticResource CategoryLabel}" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Column="2">
+                    <Grid Style="{StaticResource CategoryLabelContainer}">
+                        <Image Source="travel.png" />
+                        <Label Grid.Row="1"
+                               Text="Travel"
+                               Style="{StaticResource CategoryLabel}" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="1">
+                    <Grid Style="{StaticResource CategoryLabelContainer}">
+                        <Image Source="sport.png" />
+                        <Label Grid.Row="1"
+                               Text="Sport &amp; Wellness"
+                               Style="{StaticResource CategoryLabel}" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="1" Grid.Column="1">
+                    <Grid Style="{StaticResource CategoryLabelContainer}">
+                        <Image Source="place.png" />
+                        <Label Grid.Row="1"
+                               Text="Place to eat"
+                               Style="{StaticResource CategoryLabel}" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="1" Grid.Column="2">
+                    <Grid Style="{StaticResource CategoryLabelContainer}">
+                        <Image Source="cars.png" />
+                        <Label Grid.Row="1"
+                               Text="Cars"
+                               Style="{StaticResource CategoryLabel}" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="2">
+                    <Grid Style="{StaticResource CategoryLabelContainer}">
+                        <Image Source="pets.png" />
+                        <Label Grid.Row="1"
+                               Text="Pets"
+                               Style="{StaticResource CategoryLabel}" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="2" Grid.Column="1">
+                    <Grid Style="{StaticResource CategoryLabelContainer}">
+                        <Image Source="legal.png" />
+                        <Label Grid.Row="1"
+                               Text="Legal &amp; Accounting"
+                               Style="{StaticResource CategoryLabel}" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="2" Grid.Column="2">
+                    <Grid Style="{StaticResource CategoryLabelContainer}">
+                        <Image Source="services.png" />
+                        <Label Grid.Row="1"
+                               Text="Home Services"
+                               Style="{StaticResource CategoryLabel}" />
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

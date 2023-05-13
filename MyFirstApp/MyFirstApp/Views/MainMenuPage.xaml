@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstApp.Views.MainMenuPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Hello, world!"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="http://prismlibrary.com"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:views="clr-namespace:MyFirstApp.Views;assembly=MyFirstApp"
+            xmlns:constants="clr-namespace:MyFirstApp.Constants;assembly=MyFirstApp"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="MyFirstApp.Views.MainMenuPage"
+            UnselectedTabColor="{StaticResource Blue2}"
+            SelectedTabColor="{StaticResource Blue4}"
+            BarBackgroundColor="Transparent"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+    <views:SearchPage Title="{x:Static constants:MainMenuConstants.Search}" IconImageSource="search.png" />
+    <views:CatalogPage Title="{x:Static constants:MainMenuConstants.Catalog}" IconImageSource="catalog.png" />
+    <views:SavedPage Title="{x:Static constants:MainMenuConstants.Saved}" IconImageSource="vector.png" />
+    <views:AddPage Title="{x:Static constants:MainMenuConstants.Add}" IconImageSource="add.png" />
+</TabbedPage>

@@ -31,6 +31,9 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.7.0" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.6" />
+    <!--todo: quite primitive nuget package need to investigate another packages-->
+    <PackageReference Include="Xamarin.Rating" Version="1.0.0.2" />
   </ItemGroup>
 
   <ItemGroup>

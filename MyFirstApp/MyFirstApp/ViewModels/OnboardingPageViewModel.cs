@@ -57,9 +57,13 @@ namespace MyFirstApp.ViewModels
         public async Task OnContinueAsync()
         {
             if (Position + 1 != Data.Count)
+            {
                 Position++;
+            }
             else
+            {
                 await OnSkipAsync();
+            }
         }
 
         private async Task OnSkipAsync()

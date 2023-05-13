@@ -19,7 +19,7 @@ namespace MyFirstApp
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(MainPage)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -31,6 +31,10 @@ namespace MyFirstApp
             containerRegistry.RegisterForNavigation<OnboardingPage, OnboardingPageViewModel>();
             containerRegistry.RegisterForNavigation<SignInPage, SignInPageViewModel>();
             containerRegistry.RegisterForNavigation<MainMenuPage, MainMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<SearchPage, SearchPageViewModel>();
+            containerRegistry.RegisterForNavigation<CatalogPage, CatalogPageViewModel>();
+            containerRegistry.RegisterForNavigation<SavedPage, SavedPageViewModel>();
+            containerRegistry.RegisterForNavigation<AddPage, AddPageViewModel>();
         }
     }
 }
