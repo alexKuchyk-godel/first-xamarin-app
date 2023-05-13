@@ -3,6 +3,7 @@
 <prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                         xmlns:prism="http://prismlibrary.com"
+                        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
                         x:Class="MyFirstApp.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -37,6 +38,7 @@
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="Transparent" />
                 <Setter Property="BarTextColor" Value="{StaticResource Blue}" />
+                <Setter Property="ios:NavigationPage.HideNavigationBarSeparator" Value="true"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>
