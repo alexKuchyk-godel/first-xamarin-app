@@ -184,10 +184,15 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\abc.jpeg" />
     <BundleResource Include="Resources\add.png" />
     <BundleResource Include="Resources\beauty.png" />
+    <BundleResource Include="Resources\bookmark.png" />
     <BundleResource Include="Resources\cars.png" />
     <BundleResource Include="Resources\catalog.png" />
+    <BundleResource Include="Resources\emptystar.png" />
+    <BundleResource Include="Resources\filters.png" />
+    <BundleResource Include="Resources\fullstar.png" />
     <BundleResource Include="Resources\health.png" />
     <BundleResource Include="Resources\LaunchIcon%401x.png" />
     <BundleResource Include="Resources\LaunchIcon%402x.png" />
@@ -197,6 +202,7 @@
     <BundleResource Include="Resources\place.png" />
     <BundleResource Include="Resources\search.png" />
     <BundleResource Include="Resources\services.png" />
+    <BundleResource Include="Resources\sorting.png" />
     <BundleResource Include="Resources\sport.png" />
     <BundleResource Include="Resources\travel.png" />
     <BundleResource Include="Resources\vector.png" />

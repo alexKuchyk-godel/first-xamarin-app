@@ -80,10 +80,15 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\abc.jpeg" />
     <AndroidResource Include="Resources\drawable\add.png" />
     <AndroidResource Include="Resources\drawable\beauty.png" />
+    <AndroidResource Include="Resources\drawable\bookmark.png" />
     <AndroidResource Include="Resources\drawable\cars.png" />
     <AndroidResource Include="Resources\drawable\catalog.png" />
+    <AndroidResource Include="Resources\drawable\emptystar.png" />
+    <AndroidResource Include="Resources\drawable\filters.png" />
+    <AndroidResource Include="Resources\drawable\fullstar.png" />
     <AndroidResource Include="Resources\drawable\health.png" />
     <AndroidResource Include="Resources\drawable\legal.png" />
     <AndroidResource Include="Resources\drawable\map.png" />
@@ -91,6 +96,7 @@
     <AndroidResource Include="Resources\drawable\place.png" />
     <AndroidResource Include="Resources\drawable\search.png" />
     <AndroidResource Include="Resources\drawable\services.png" />
+    <AndroidResource Include="Resources\drawable\sorting.png" />
     <AndroidResource Include="Resources\drawable\sport.png" />
     <AndroidResource Include="Resources\drawable\travel.png" />
     <AndroidResource Include="Resources\drawable\vector.png" />

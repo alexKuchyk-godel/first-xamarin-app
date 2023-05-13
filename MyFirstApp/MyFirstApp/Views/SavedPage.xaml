@@ -3,9 +3,99 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
+             xmlns:rating="clr-namespace:Rating;assembly=Rating"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="MyFirstApp.Views.SavedPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MenuLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Opacity" Value="0.6" />
+                <Setter Property="FontFamily" Value="Roboto-Medium" />
+                <Setter Property="TextColor" Value="{StaticResource Black}" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Start" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <Label Text="Saved" />
+        <Grid RowDefinitions="45,*">
+            <Grid ColumnDefinitions="25,70,25,*">
+                <Image Source="filters.png"
+                       WidthRequest="18"
+                       HeightRequest="12"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Start"
+                       Margin="0,3,0,0" />
+                <Label Text="Filters"
+                       Grid.Column="1"
+                       Style="{StaticResource MenuLabel}" />
+                <Image Source="sorting.png"
+                       Grid.Column="2"
+                       WidthRequest="20"
+                       HeightRequest="18"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Start" />
+                <Label Text="Sort by"
+                       Grid.Column="3"
+                       Style="{StaticResource MenuLabel}" />
+            </Grid>
+            <ListView Grid.Row="1" ItemsSource="{Binding Data}"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="95,*,20"
+                                  RowDefinitions="20,20,*"
+                                  Padding="10">
+                                <Image Source="{Binding ImageSource}"
+                                       Grid.RowSpan="3"
+                                       VerticalOptions="Start"
+                                       HorizontalOptions="Start"
+                                       HeightRequest="100"
+                                       WidthRequest="85" />
+                                <Label Text="{Binding Name}"
+                                       Grid.Column="1"
+                                       FontSize="17"
+                                       FontFamily="Roboto-Bold"
+                                       TextColor="{StaticResource MainBlue}"
+                                       VerticalOptions="Start" />
+                                <Label Text="{Binding Address}"
+                                       Grid.Column="1"
+                                       Grid.Row="1"
+                                       FontSize="15"
+                                       FontFamily="Roboto-Regular"
+                                       TextColor="{StaticResource Blue2}" />
+                                <Grid Grid.Column="1"
+                                      Grid.Row="2"
+                                      ColumnDefinitions="125,*">
+                                    <rating:RatingBar HorizontalOptions="Start"
+                                                      ImageWidth="20"
+                                                      ImageHeight="20"
+                                                      FlowDirection="LeftToRight"
+                                                      EmptyStarImage="emptystar"
+                                                      FillStarImage="fullstar"
+                                                      SelectedStarValue="{Binding Rating}" />
+                                    <Label Text="{Binding FeedBacksCount, StringFormat='({0})'}"
+                                           Grid.Column="1"
+                                           FontSize="15"
+                                           FontFamily="Roboto-Regular"
+                                           TextColor="{StaticResource Mint}"
+                                           VerticalOptions="Center" />
+                                </Grid>
+
+                                <Image Source="bookmark.png"
+                                       Grid.Column="2"
+                                       Grid.RowSpan="3"
+                                       VerticalOptions="Start"
+                                       HorizontalOptions="End"
+                                       HeightRequest="18"
+                                       WidthRequest="14" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
